@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated particles background -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Main calculator container -->
+    <div class="calculator-container">
+        <!-- Sound toggle button -->
+        <button class="sound-toggle" id="soundToggle" onclick="toggleSound()">🔊</button>
+
+        <!-- Calculator header -->
+        <div class="calculator-header">
+            <div class="calculator-title">
+                <span>🧮</span>
+                <span>Advanced Calculator</span>
+            </div>
+            <button class="mode-toggle" onclick="toggleScientific()">Scientific</button>
+        </div>
+
+        <!-- Display screen -->
+        <div class="display-container">
+            <div class="history" id="history"></div>
+            <div class="display" id="display">0</div>
+        </div>
+
+        <!-- Scientific buttons panel -->
+        <div class="scientific-panel" id="scientificPanel">
+            <button class="btn scientific" onclick="appendFunction('sin')">sin</button>
+            <button class="btn scientific" onclick="appendFunction('cos')">cos</button>
+            <button class="btn scientific" onclick="appendFunction('tan')">tan</button>
+            <button class="btn scientific" onclick="appendFunction('log')">log</button>
+            <button class="btn scientific" onclick="appendFunction('ln')">ln</button>
+            <button class="btn scientific" onclick="appendFunction('sqrt')">√</button>
+            <button class="btn scientific" onclick="appendNumber('3.14159')">π</button>
+            <button class="btn scientific" onclick="appendNumber('2.71828')">e</button>
+            <button class="btn scientific" onclick="appendOperator('^')">x^y</button>
+            <button class="btn scientific" onclick="factorial()">x!</button>
+            <button class="btn scientific" onclick="appendOperator('%')">mod</button>
+            <button class="btn scientific" onclick="reciprocal()">1/x</button>
+        </div>
+
+        <!-- Main buttons -->
+        <div class="buttons">
+            <!-- Row 1 -->
+            <button class="btn clear" onclick="clearAll()">AC</button>
+            <button class="btn operator" onclick="deleteLast()">⌫</button>
+            <button class="btn operator" onclick="appendOperator('%')">%</button>
+            <button class="btn operator" onclick="appendOperator('/')">÷</button>
+
+            <!-- Row 2 -->
+            <button class="btn" onclick="appendNumber('7')">7</button>
+            <button class="btn" onclick="appendNumber('8')">8</button>
+            <button class="btn" onclick="appendNumber('9')">9</button>
+            <button class="btn operator" onclick="appendOperator('*')">×</button>
+
+            <!-- Row 3 -->
+            <button class="btn" onclick="appendNumber('4')">4</button>
+            <button class="btn" onclick="appendNumber('5')">5</button>
+            <button class="btn" onclick="appendNumber('6')">6</button>
+            <button class="btn operator" onclick="appendOperator('-')">−</button>
+
+            <!-- Row 4 -->
+            <button class="btn" onclick="appendNumber('1')">1</button>
+            <button class="btn" onclick="appendNumber('2')">2</button>
+            <button class="btn" onclick="appendNumber('3')">3</button>
+            <button class="btn operator" onclick="appendOperator('+')">+</button>
+
+            <!-- Row 5 -->
+            <button class="btn zero" onclick="appendNumber('0')">0</button>
+            <button class="btn" onclick="appendDecimal()">.</button>
+            <button class="btn equals" onclick="calculate()">=</button>
+        </div>
+
+        <!-- Footer with keyboard hints -->
+        <div class="calculator-footer">
+            <div class="keyboard-hint">
+                <div class="key-group">
+                    <span>Numbers:</span>
+                    <span class="key">0-9</span>
+                </div>
+                <div class="key-group">
+                    <span>Operators:</span>
+                    <span class="key">+</span>
+                    <span class="key">-</span>
+                    <span class="key">*</span>
+                    <span class="key">/</span>
+                </div>
+                <div class="key-group">
+                    <span>Actions:</span>
+                    <span class="key">Enter</span>
+                    <span class="key">Esc</span>
+                    <span class="key">Backspace</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading spinner -->
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+        </div>
+    </div>
+<script src="app.js"></script>
+    <script>
+      
+    </script>
+</body>
+</html>
